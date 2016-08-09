@@ -4,4 +4,70 @@ Logo          : False
 
 [TITLE]
 
-# Para
+**Gliederung**
+
+- POS-Tagging
+  - Definition
+  - Nutzen
+- Anforderung, Genauigkeit, aktueller Stand
+  - Grundlegende Herausforderungen/Verbesserungen
+- Ansätze
+  - Kategorisierung
+  - Vergleich
+- Fazit/Ausblick
+  - Solved?
+  - spezielle Herausforderungen
+  - zukuenftige Bedeutung
+
+
+# Einleitung
+## POS-Tagging: Definition
+
+POS-Tagging ("Part-Of-Speech-Tagging") bezeichnet das Versehen der Worte innerhalb eines Textes mit den zugehörigen Wortarten. Diese Informationen werden an die Worte in Form von sogenannten Tags angefügt, daher der Name.
+Als Grundlage für die Entscheidung, zu welcher Wortart ein Wort gehört, werden Wörterbücher, Syntax, der Kontext und statistische Analysen herangezogen.
+Ist ein Wort erst einmal mit der zugehörigen Wortart versehen, kann dies für vielfältige weitere Aufgaben im Bereich des Natural Language Processing nützlich sein - so lässt sich zum Beispiel in einigen Fällen eine semantische Mehrdeutigkeit durch Kenntnis der Wortart auflösen.
+
+## Fragestellung
+
+Ich versuche, in dieser Arbeit die Frage zu beantworten, ob POS-Tagging als gelöstes Problem betrachtet werden kann.
+
+# Die Aufgabe
+
+## Text-Korpora
+Der Schwierigkeitsgrad, ebenso wie der Nutzen von POS-Tagging wird sehr stark durch das verwendete Tag-Set bestimmt. Die bereits aus der Schule bekannten Wortarten werden hier in der Regel wesentlich genauer spezifiert, um einen größeren Nutzen aus den Tags ziehen zu können.
+
+Hierzu sind Textsammlungen (Textcorpora) nötig, die bereits mit Tags versehen wurden.
+Dabei existieren sehr homogene Korpora für spezielle Zwecke, ebenso wie möglichst heterogene Korpora. Außerdem bringen die meisten Korpora ihr eigenes Tag Set mit. Insgesamt ist es also für das POS Tagging essenziell, den richtigen Text-Korpus je nach Anwendungsfall zu wählen (oder zu erzeugen).
+
+Historisch von Bedeutung ist hier der Brown Copus (für die englische Sprache), welcher etwa 1.000.000 Worte enthält. Diese wurden im Laufe der Zeit mit Tags versehen und diese Tags wurden mit der wachsenden Genauigkeit der Tagger und viel manueller Arbeit korrigiert, sodass mittlerweile für den Korpus eine nahezu hundertprozentige Genauigkeit besteht.
+Mittlerweile wurde der Brown Corpus jedoch für die meisten Anwendungen von einer Vielzahl jüngerer und umfangreicherer Kopora abgelöst, da die Menge an Worten im Brown Corpus für die Trainingsmethoden vieler Tagger schlichtweg unzureichend ist.
+
+Ein prominenter Korpus für die englische Sprache ist beispielsweise der British National Corpus, der mit etwa 100 Millionen Worten - zusammengesetzt aus 90% geschriebenen Texten und 10% transkribierten gesprochenen Texten - versucht eine möglichst große Bandbreite an modernem Englisch abzudecken. Um es dennoch zu ermöglichen, den Hintergrund der Texte beim Taggen zu berücksichtigen, sind die Texte in "domain", "time" und "medium" eingeteilt, wobei "domain" die Textgattung, "time" die Zeit zu der der Text entstanden ist und "medium" das Transportmedium (z.B. Zeitungsartikel oder buch) bezeichnet. 
+
+Ein weiterer Korpus ist die Penn Treebank (PTB). Dieser Korpus entstand, indem Textsammlungen geparsed und im Nachhinein manuell korrigiert wurden. Er ist zusammengesetzt aus verschiedenen Textquellen, darunter der gesamte Brown Corpus, eine Sammlung von Telefonattransskripten, etwa einer Million Worten aus Zeitungstexten des Wall Street Journal, et cetera. Der gesamte Korpus ist mit POS-Tags versehen, während etwa zwei Drittel zusätzlich vollständig geparsed ist (d.h. es wurde ein Syntaxbaum für jeden Satz erzeugt).
+
+Für die deutsche Sprache gibt es zum Beispiel den TIGER Corpus, der aus etwa 900.000 Worten aus schriftlichen Nachrichtentexten der Frankfurter Rundschau aufgebaut ist.
+
+## Grundlegende Herangehensweisen
+Oft lässt sich die Wortart direkt von einem Wort ableiten - ohne weitere Informationen zu berücksichtigen. Das ist dann der Fall, wenn das Wort in einem Wörterbuch enthalten (also bereits bekannt) ist und es nur eine einzige Wortart haben kann (d.h. keine Mehrdeutigkeit der Wortart besteht).</br>
+Leider ist in den meisten kein ausreichend vollständiges Wörterbuch verfügbar. Die eigentliche Herausforderung bilden deshalb die übrigen Worte, also unbekannte Worte und solche, die mehreren Wortarten zugehörig sein können. Im deutschen ist die erste Kategorie besonders groß, da es eine unendliche Zahl valider, zusammengesetzter Worte gibt, was ein vollständiges Wörterbuch unmöglich macht. In der englischen Sprache spielen zusammengesetzte Worte zwar eine kleinere Rolle, aber dafür existieren zahlreiche Worte, die mehreren Wortarten angehören können, insbesondere, da Substantive sich nicht durch Großschreibung von anderen Wortarten abheben.
+
+Um diese Fälle, in denen sich die Wortart auf triviale Weise entscheiden lässt, dennoch zu disambiguieren, bieten sich mehrere Ansätze.
+
+Die naivste Methode ist, einfach jedem Wort die Wortart zuzuweisen, in der es statistisch am häufigsten auftritt. Das nützt zwar im Blick auf unbekannte Worte nichts, aber für mehrdeutige Wortarten verbessert diese Technik das Resultat deutlich.
+Zudem ist leicht einzusehen, dass auf diese Weise noch immer keine zufriedenstellende Genauigkeit erreicht werden kann; da gerade im Englischen viele Worte in mehr als einer Wortart jeweils häufig auftreten (z.b. fish).
+
+Um unbekannte Worte klassifizieren zu können, können gewisse Eigenschaften der Worte als betrachtet werden, in dem Versuch, aus diesen eine Wahrscheinlichkeit für unterschiedliche Wortarten abzuleiten, beispielsweise die Anzahl von Ziffern oder Großbuchstaben im Wort oder ob es einen Bindestrich enthält. Mit handgeschriebenen Regeln oder Maschinenlernverfahren kann dies in die Entscheidung für eine Wortart miteinfließen.
+
+Der nächste Schritt ist, den syntaktischen Kontext des Wortes mit in die Klassifizierung einzubeziehen. Ein simples Beispiel hierfür ist, dass ein Substantiv nach einem Artikel wesentlich wahrscheinlicher ist, als ein Verb. Die Betrachtung eines größeren Kontextes um das Wort herum führt jedoch in der Regel zu proportional größerem Rechenaufwand.
+
+Dasselbe gilt in noch größerem Maße für das Einbeziehen des semantischen Kontextes. Dies erlaubt zwar einige Fälle zu entscheiden, in denen die Wortart rein syntaktisch nicht auflösbar wäre, aber der Aufwand hierfür ist so gewaltig, dass dies bei den meisten aktuellen POS-Taggern keine Rolle spielt.
+
+## Status Quo
+
+
+
+**Sources**
+
+- Tiger-Anotationsschema: http://www.ims.uni-stuttgart.de/forschung/ressourcen/korpora/TIGERCorpus/annotation/tiger_scheme-syntax.pdf
+- Well-known and influential corpora: A survey: http://www.lancaster.ac.uk/staff/xiaoz/papers/corpus%20survey.htm
