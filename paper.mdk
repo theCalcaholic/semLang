@@ -69,5 +69,12 @@ Dasselbe gilt in noch größerem Maße für das Einbeziehen des semantischen Kon
 
 **Sources**
 
-- Tiger-Anotationsschema: http://www.ims.uni-stuttgart.de/forschung/ressourcen/korpora/TIGERCorpus/annotation/tiger_scheme-syntax.pdf
-- Well-known and influential corpora: A survey: http://www.lancaster.ac.uk/staff/xiaoz/papers/corpus%20survey.htm
+* test [p. 3][#tigerscheme]
+* [well-known and influential corpora: a survey]
+
+[//]: # (////////////////////////////////////)
+[//]: # (Source Definitions)
+[//]: # (////////////////////////////////////)
+
+[#tigerscheme]: TIGER-Annotationsschema
+[Well-known and influential corpora: A survey]: http://www.lancaster.ac.uk/staff/xiaoz/papers/corpus%20survey.htm
