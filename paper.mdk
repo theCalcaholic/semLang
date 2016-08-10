@@ -1,22 +1,19 @@
 Title         : Überblick über die Aufgabe des POS-Tagging und bestehende Lösungen
-Author        : Tobias Knöppler </br> Fachbereich Informatik, Uni Hamburg
+subtitle      : Seminararbeit zum Thema Sprachverarbeitung
+Author        : Tobias Knöppler
+Affiliation   : Fachbereich Informatik, Uni Hamburg
+Email         : tobias@knoeppler.net 
 Logo          : False
 Bibliography  : sources.bib
 Cite Style    : natural
 name-contents : Inhaltsverzeichnis
 
 
-~ Center {font-size:18pt}
-Seminararbeit zum Thema Sprachverarbeitung
-~
-
-&br;
-
-------
-
-&br;
-
 [TITLE]
+
+&br;
+
+-----
 
 &pagebreak;
 
