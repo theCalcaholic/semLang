@@ -10,34 +10,37 @@
 
 
 
-%mdk-data-line={12}
-\mdxtitleblockstart{}
-%mdk-data-line={12}
-\mdxtitle{\mdline{12}Überblick über die Aufgabe des POS-Tagging und bestehende Lösungen}%mdk
-
-%mdk-data-line={15}
-\mdxsubtitle{\mdline{15}Seminararbeit zum Thema Sprachverarbeitung}%mdk
-\mdxauthorstart{}
-%mdk-data-line={20}
-\mdxauthorname{\mdline{20}Tobias Knöppler}%mdk
-
-%mdk-data-line={23}
-\mdxauthoraddress{\mdline{23}Fachbereich Informatik, Uni Hamburg}%mdk
-
-%mdk-data-line={26}
-\mdxauthoremail{\mdline{26}tobias@knoeppler.net}%mdk
-\mdxauthorend\mdtitleauthorrunning{}{}\mdxtitleblockend%mdk
-
 %mdk-data-line={14}
-\noindent\mdline{14}\mdbr
-\mdline{14}%mdk
+\mdxtitleblockstart{}
+%mdk-data-line={14}
+\mdxtitle{\mdline{14}Überblick über die Aufgabe des POS-Tagging und bestehende Lösungen}%mdk
+
+%mdk-data-line={17}
+\mdxsubtitle{\mdline{17}Seminararbeit zum Thema Sprachverarbeitung}%mdk
+\mdxauthorstart{}
+%mdk-data-line={22}
+\mdxauthorname{\mdline{22}Tobias Knöppler}%mdk
+
+%mdk-data-line={25}
+\mdxauthoraddress{\mdline{25}Fachbereich Informatik, Uni Hamburg}%mdk
+
+%mdk-data-line={28}
+\mdxauthoremail{\mdline{28}tobias@knoeppler.net}%mdk
+\mdxauthorend
+%mdk-data-line={37}
+\mdxtitlefooter{\mdline{37}Eingereicht am 10.08.2016}%mdk
+\mdtitleauthorrunning{}{}\mdxtitleblockend%mdk
 
 %mdk-data-line={16}
-\mdhr{}%mdk
+\noindent\mdline{16}\mdbr
+\mdline{16}%mdk
 
 %mdk-data-line={18}
-\noindent\mdline{18}\newpage{}\mdline{18}%mdk
-\mdline{20}
+\mdhr{}%mdk
+
+%mdk-data-line={20}
+\noindent\mdline{20}\newpage{}\mdline{20}%mdk
+\mdline{22}
 \begin{mdtoc}%mdk
 
 \section*{Inhaltsverzeichnis}\label{sec-inhaltsverzeichnis}%mdk%mdk
@@ -86,192 +89,215 @@
 %mdk
 \end{mdtoc}%mdk
 
-%mdk-data-line={22}
-\noindent\mdline{22}\newpage{}\mdline{22}%mdk
-
 %mdk-data-line={24}
-\mdline{24}\newpage{}\mdline{24}%mdk
+\noindent\mdline{24}\newpage{}\mdline{24}%mdk
 
 %mdk-data-line={26}
-\section{\mdline{26}1.\hspace*{0.5em}\mdline{26}Einleitung}\label{sec-einleitung}%mdk%mdk
+\mdline{26}\newpage{}\mdline{26}%mdk
 
-%mdk-data-line={27}
-\subsection{\mdline{27}1.1.\hspace*{0.5em}\mdline{27}POS-Tagging: Definition}\label{sec-pos-tagging--definition}%mdk%mdk
+%mdk-data-line={28}
+\mdline{28}\textbf{Abstract}\mdline{28}%mdk
 
-%mdk-data-line={29}
-\noindent\mdline{29}POS-Tagging (\mdline{29}\textquotedblleft{}Part-Of-Speech-Tagging\textquotedblright{}\mdline{29}) bezeichnet das Versehen der Worte innerhalb eines Textes mit den zugehörigen Wortarten. Diese Informationen werden an die Worte in Form von sogenannten Tags angefügt, daher der Name.
-Als Grundlage für die Entscheidung, zu welcher Wortart ein Wort gehört, werden Wörterbücher, Syntax, der Kontext und statistische Analysen herangezogen.
-Ist ein Wort erst einmal mit der zugehörigen Wortart versehen, kann dies für vielfältige weitere Aufgaben im Bereich des Natural Language Processing nützlich sein\mdline{31} \mdline{31}- so lässt sich zum Beispiel in einigen Fällen eine semantische Mehrdeutigkeit durch Kenntnis der Wortart auflösen.%mdk
-
-%mdk-data-line={33}
-\subsection{\mdline{33}1.2.\hspace*{0.5em}\mdline{33}Ziel der Arbeit}\label{sec-ziel-der-arbeit}%mdk%mdk
+%mdk-data-line={30}
+\mdline{30}Ich erkläre die grundlegende Aufgabe von Part-Of-Speech-Tagging und die allgemeine Herangehensweise inklusive einiger konkreter Beispiele.\mdline{30}\mdline{30}
+Diese Arbeit soll nicht dazu dienen, POS-Tagging-Verfahren in ihrer Tiefe zu erklären, sondern das Aufgabenfeld einordnen zu können.%mdk
+\begin{mdtabular}{2}{0pt}{0pt}%mdk
+\begin{tabular}{ll}
 
 %mdk-data-line={34}
-\noindent\mdline{34}In dieser Arbeit versuche ich, eine möglichste breite Übersicht über den aktuellen Stand des POS-Tagging zu geben.\mdline{34}\mdline{34}%mdk
+\begin{mdcolumn}%mdk
+\begin{mdblock}{width=\dimwidth{0.50}}%mdk
+%mdk-data-line={36}
+\section{\mdline{36}1.\hspace*{0.5em}\mdline{36}Einleitung}\label{sec-einleitung}%mdk%mdk
 
 %mdk-data-line={37}
-\section{\mdline{37}2.\hspace*{0.5em}\mdline{37}Verfahren}\label{sec-verfahren}%mdk%mdk
+\subsection{\mdline{37}1.1.\hspace*{0.5em}\mdline{37}POS-Tagging: Definition}\label{sec-pos-tagging--definition}%mdk%mdk
 
 %mdk-data-line={39}
-\subsection{\mdline{39}2.1.\hspace*{0.5em}\mdline{39}Text-Korpora}\label{sec-text-korpora}%mdk%mdk
+\noindent\mdline{39}POS-Tagging (\mdline{39}\textquotedblleft{}Part-Of-Speech-Tagging\textquotedblright{}\mdline{39}) bezeichnet das Versehen der Worte innerhalb eines Textes mit den zugehörigen Wortarten. Diese Informationen werden an die Worte in Form von sogenannten Tags angefügt, daher der Name.
+Als Grundlage für die Entscheidung, zu welcher Wortart ein Wort gehört, werden Wörterbücher, Syntax, der Kontext und statistische Analysen herangezogen.
+Ist ein Wort erst einmal mit der zugehörigen Wortart versehen, kann dies für vielfältige weitere Aufgaben im Bereich des Natural Language Processing nützlich sein\mdline{41} \mdline{41}- so lässt sich zum Beispiel in einigen Fällen eine semantische Mehrdeutigkeit durch Kenntnis der Wortart auflösen.%mdk
 
-%mdk-data-line={40}
-\noindent\mdline{40}Der Schwierigkeitsgrad, ebenso wie der Nutzen von POS-Tagging wird sehr stark durch das verwendete Tag-Set bestimmt. Die bereits aus der Schule bekannten Wortarten werden hier in der Regel wesentlich genauer spezifiert, um einen größeren Nutzen aus den Tags ziehen zu können.%mdk
+%mdk-data-line={43}
+\subsection{\mdline{43}1.2.\hspace*{0.5em}\mdline{43}Ziel der Arbeit}\label{sec-ziel-der-arbeit}%mdk%mdk
 
-%mdk-data-line={42}
-\mdline{42}Hierzu sind Textsammlungen (Textcorpora) nötig, die bereits mit Tags versehen wurden.
-Dabei existieren sehr homogene Korpora für spezielle Zwecke, ebenso wie möglichst heterogene Korpora. Außerdem bringen die meisten Korpora ihr eigenes Tag Set mit. Insgesamt ist es also für das POS Tagging essenziell, den richtigen Text-Korpus je nach Anwendungsfall zu wählen (oder zu erzeugen).%mdk
+%mdk-data-line={44}
+\noindent\mdline{44}In dieser Arbeit versuche ich, eine möglichste breite Übersicht über den aktuellen Stand des POS-Tagging zu geben.\mdline{44}\mdline{44}%mdk
 
-%mdk-data-line={45}
-\mdline{45}Historisch von Bedeutung ist hier der Brown Copus (für die englische Sprache), welcher etwa 1.000.000 Worte enthält. Diese wurden im Laufe der Zeit mit Tags versehen und diese Tags wurden mit der wachsenden Genauigkeit der Tagger und viel manueller Arbeit korrigiert, sodass mittlerweile für den Korpus eine nahezu hundertprozentige Genauigkeit besteht.
-Mittlerweile wurde der Brown Corpus jedoch für die meisten Anwendungen von einer Vielzahl jüngerer und umfangreicherer Kopora abgelöst, da die Menge an Worten im Brown Corpus für die Trainingsmethoden vieler Tagger schlichtweg unzureichend ist.%mdk
+%mdk-data-line={46}
+\section{\mdline{46}2.\hspace*{0.5em}\mdline{46}Verfahren}\label{sec-verfahren}%mdk%mdk
 
 %mdk-data-line={48}
-\mdline{48}Ein prominenter Korpus für die englische Sprache ist beispielsweise der British National Corpus, der mit etwa 100 Millionen Worten\mdline{48} \mdline{48}- zusammengesetzt aus 90\% geschriebenen Texten und 10\% transkribierten gesprochenen Texten\mdline{48} \mdline{48}- versucht eine möglichst große Bandbreite an modernem Englisch abzudecken. Um es dennoch zu ermöglichen, den Hintergrund der Texte beim Taggen zu berücksichtigen, sind die Texte in \mdline{48}\textquotedblleft{}domain\textquotedblright{}\mdline{48}, \mdline{48}\textquotedblleft{}time\textquotedblright{}\mdline{48} und \mdline{48}\textquotedblleft{}medium\textquotedblright{}\mdline{48} eingeteilt, wobei \mdline{48}\textquotedblleft{}domain\textquotedblright{}\mdline{48} die Textgattung, \mdline{48}\textquotedblleft{}time\textquotedblright{}\mdline{48} die Zeit zu der der Text entstanden ist und \mdline{48}\textquotedblleft{}medium\textquotedblright{}\mdline{48} das Transportmedium (z.B. Zeitungsartikel oder buch) bezeichnet.%mdk
+\subsection{\mdline{48}2.1.\hspace*{0.5em}\mdline{48}Text-Korpora}\label{sec-text-korpora}%mdk%mdk
 
-%mdk-data-line={50}
-\mdline{50}Ein weiterer Korpus ist die Penn Treebank (PTB). Dieser Korpus entstand, indem Textsammlungen geparsed und im Nachhinein manuell korrigiert wurden. Er ist zusammengesetzt aus verschiedenen Textquellen, darunter der gesamte Brown Corpus, eine Sammlung von Telefonattransskripten, etwa einer Million Worten aus Zeitungstexten des Wall Street Journal, et cetera. Der gesamte Korpus ist mit POS-Tags versehen, während etwa zwei Drittel zusätzlich vollständig geparsed ist (d.h. es wurde ein Syntaxbaum für jeden Satz erzeugt).%mdk
+%mdk-data-line={49}
+\noindent\mdline{49}Der Schwierigkeitsgrad, ebenso wie der Nutzen von POS-Tagging wird sehr stark durch das verwendete Tag-Set bestimmt. Die bereits aus der Schule bekannten Wortarten werden hier in der Regel wesentlich genauer spezifiert, um einen größeren Nutzen aus den Tags ziehen zu können.%mdk
 
-%mdk-data-line={52}
-\mdline{52}Für die deutsche Sprache gibt es zum Beispiel den TIGER Corpus, der aus etwa 900.000 Worten aus schriftlichen Nachrichtentexten der Frankfurter Rundschau aufgebaut ist\mdline{52}~(\mdcite{imsweb}{8})\mdline{52}.%mdk
-
-%mdk-data-line={54}
-\subsection{\mdline{54}2.2.\hspace*{0.5em}\mdline{54}Entscheidungsgrundlagen}\label{sec-entscheidungsgrundlagen}%mdk%mdk
-
+%mdk-data-line={51}
+\mdline{51}Hierzu sind Textsammlungen (Textcorpora) nötig, die bereits mit Tags versehen wurden.
+Dabei existieren sehr homogene Korpora für spezielle Zwecke, ebenso wie möglichst heterogene Korpora. Außerdem bringen die meisten Korpora ihr eigenes Tag Set mit. Insgesamt ist es also für das POS Tagging essenziell, den richtigen Text-Korpus je nach Anwendungsfall zu wählen (oder zu erzeugen).%mdk%mdk
+\end{mdblock}%mdk
+\end{mdcolumn}%mdk
+&
 %mdk-data-line={55}
-\noindent\mdline{55}Oft lässt sich die Wortart direkt von einem Wort ableiten\mdline{55} \mdline{55}- ohne weitere Informationen zu berücksichtigen. Das ist dann der Fall, wenn das Wort in einem Wörterbuch enthalten (also bereits bekannt) ist und es nur eine einzige Wortart haben kann (d.h. keine Mehrdeutigkeit der Wortart besteht).\mdline{55}\mdline{55}
-Leider ist in den meisten kein ausreichend vollständiges Wörterbuch verfügbar. Die eigentliche Herausforderung bilden deshalb die übrigen Worte, also unbekannte Worte und solche, die mehreren Wortarten zugehörig sein können. Im deutschen ist die erste Kategorie besonders groß, da es eine unendliche Zahl valider, zusammengesetzter Worte gibt, was ein vollständiges Wörterbuch unmöglich macht. In der englischen Sprache spielen zusammengesetzte Worte zwar eine kleinere Rolle, aber dafür existieren zahlreiche Worte, die mehreren Wortarten angehören können, insbesondere, da Substantive sich nicht durch Großschreibung von anderen Wortarten abheben.%mdk
+\begin{mdcolumn}%mdk
+\begin{mdblock}{width=\dimwidth{0.50}}%mdk
+%mdk
+\end{mdblock}%mdk
+\end{mdcolumn}%mdk
+\\
+\end{tabular}\end{mdtabular}
 
-%mdk-data-line={58}
-\mdline{58}Um diese Fälle, in denen sich die Wortart auf triviale Weise entscheiden lässt, dennoch zu disambiguieren, bieten sich mehrere Ansätze.%mdk
+%mdk-data-line={59}
+\noindent\mdline{59}Historisch von Bedeutung ist hier der Brown Copus (für die englische Sprache), welcher etwa 1.000.000 Worte enthält. Diese wurden im Laufe der Zeit mit Tags versehen und diese Tags wurden mit der wachsenden Genauigkeit der Tagger und viel manueller Arbeit korrigiert, sodass mittlerweile für den Korpus eine nahezu hundertprozentige Genauigkeit besteht.
+Mittlerweile wurde der Brown Corpus jedoch für die meisten Anwendungen von einer Vielzahl jüngerer und umfangreicherer Kopora abgelöst, da die Menge an Worten im Brown Corpus für die Trainingsmethoden vieler Tagger schlichtweg unzureichend ist.%mdk
 
-%mdk-data-line={60}
-\mdline{60}Die naivste Methode ist, einfach jedem Wort die Wortart zuzuweisen, in der es statistisch am häufigsten auftritt. Das nützt zwar im Blick auf unbekannte Worte nichts, aber für mehrdeutige Wortarten verbessert diese Technik das Resultat deutlich.
-Zudem ist leicht einzusehen, dass auf diese Weise noch immer keine zufriedenstellende Genauigkeit erreicht werden kann; da gerade im Englischen viele Worte in mehr als einer Wortart jeweils häufig auftreten (z.b. fish).%mdk
+%mdk-data-line={62}
+\mdline{62}Ein prominenter Korpus für die englische Sprache ist beispielsweise der British National Corpus, der mit etwa 100 Millionen Worten\mdline{62} \mdline{62}- zusammengesetzt aus 90\% geschriebenen Texten und 10\% transkribierten gesprochenen Texten\mdline{62} \mdline{62}- versucht eine möglichst große Bandbreite an modernem Englisch abzudecken. Um es dennoch zu ermöglichen, den Hintergrund der Texte beim Taggen zu berücksichtigen, sind die Texte in \mdline{62}\textquotedblleft{}domain\textquotedblright{}\mdline{62}, \mdline{62}\textquotedblleft{}time\textquotedblright{}\mdline{62} und \mdline{62}\textquotedblleft{}medium\textquotedblright{}\mdline{62} eingeteilt, wobei \mdline{62}\textquotedblleft{}domain\textquotedblright{}\mdline{62} die Textgattung, \mdline{62}\textquotedblleft{}time\textquotedblright{}\mdline{62} die Zeit zu der der Text entstanden ist und \mdline{62}\textquotedblleft{}medium\textquotedblright{}\mdline{62} das Transportmedium (z.B. Zeitungsartikel oder buch) bezeichnet.%mdk
 
-%mdk-data-line={63}
-\mdline{63}Um unbekannte Worte klassifizieren zu können, können gewisse Eigenschaften der Worte als betrachtet werden, in dem Versuch, aus diesen eine Wahrscheinlichkeit für unterschiedliche Wortarten abzuleiten, beispielsweise die Anzahl von Ziffern oder Großbuchstaben im Wort oder ob es einen Bindestrich enthält. Mit handgeschriebenen Regeln oder Maschinenlernverfahren kann dies in die Entscheidung für eine Wortart miteinfließen.%mdk
+%mdk-data-line={64}
+\mdline{64}Ein weiterer Korpus ist die Penn Treebank (PTB). Dieser Korpus entstand, indem Textsammlungen geparsed und im Nachhinein manuell korrigiert wurden. Er ist zusammengesetzt aus verschiedenen Textquellen, darunter der gesamte Brown Corpus, eine Sammlung von Telefonattransskripten, etwa einer Million Worten aus Zeitungstexten des Wall Street Journal, et cetera. Der gesamte Korpus ist mit POS-Tags versehen, während etwa zwei Drittel zusätzlich vollständig geparsed ist (d.h. es wurde ein Syntaxbaum für jeden Satz erzeugt).%mdk
 
-%mdk-data-line={65}
-\mdline{65}Der nächste Schritt ist, den syntaktischen Kontext des Wortes mit in die Klassifizierung einzubeziehen. Ein simples Beispiel hierfür ist, dass ein Substantiv nach einem Artikel wesentlich wahrscheinlicher ist, als ein Verb. Die Betrachtung eines größeren Kontextes um das Wort herum führt jedoch in der Regel zu proportional größerem Rechenaufwand.%mdk
+%mdk-data-line={66}
+\mdline{66}Für die deutsche Sprache gibt es zum Beispiel den TIGER Corpus, der aus etwa 900.000 Worten aus schriftlichen Nachrichtentexten der Frankfurter Rundschau aufgebaut ist\mdline{66}~(\mdcite{imsweb}{8})\mdline{66}.%mdk
 
-%mdk-data-line={67}
-\mdline{67}Dasselbe gilt in noch größerem Maße für das Einbeziehen des semantischen Kontextes. Dies erlaubt zwar einige Fälle zu entscheiden, in denen die Wortart rein syntaktisch nicht auflösbar wäre, aber der Aufwand hierfür ist so gewaltig, dass dies bei den meisten aktuellen POS-Taggern keine Rolle spielt.%mdk
+%mdk-data-line={68}
+\subsection{\mdline{68}2.2.\hspace*{0.5em}\mdline{68}Entscheidungsgrundlagen}\label{sec-entscheidungsgrundlagen}%mdk%mdk
 
 %mdk-data-line={69}
-\mdline{69}Die genannten Merkmale bilden zusammen die Eigenschaften auf deren Grundlage die meisten POS-Tagger trainiert werden.%mdk
+\noindent\mdline{69}Oft lässt sich die Wortart direkt von einem Wort ableiten\mdline{69} \mdline{69}- ohne weitere Informationen zu berücksichtigen. Das ist dann der Fall, wenn das Wort in einem Wörterbuch enthalten (also bereits bekannt) ist und es nur eine einzige Wortart haben kann (d.h. keine Mehrdeutigkeit der Wortart besteht).\mdline{69}\mdline{69}
+Leider ist in den meisten kein ausreichend vollständiges Wörterbuch verfügbar. Die eigentliche Herausforderung bilden deshalb die übrigen Worte, also unbekannte Worte und solche, die mehreren Wortarten zugehörig sein können. Im deutschen ist die erste Kategorie besonders groß, da es eine unendliche Zahl valider, zusammengesetzter Worte gibt, was ein vollständiges Wörterbuch unmöglich macht. In der englischen Sprache spielen zusammengesetzte Worte zwar eine kleinere Rolle, aber dafür existieren zahlreiche Worte, die mehreren Wortarten angehören können, insbesondere, da Substantive sich nicht durch Großschreibung von anderen Wortarten abheben.%mdk
 
-%mdk-data-line={71}
-\subsection{\mdline{71}2.3.\hspace*{0.5em}\mdline{71}Genauigkeit}\label{sec-genauigkeit}%mdk%mdk
+%mdk-data-line={72}
+\mdline{72}Um diese Fälle, in denen sich die Wortart auf triviale Weise entscheiden lässt, dennoch zu disambiguieren, bieten sich mehrere Ansätze.%mdk
 
-%mdk-data-line={73}
-\noindent\mdline{73}Die Genauigkeit eines POS-Taggers wird in der Regel in \% der richtig eingeordneten Worte angegeben. Dieser Wert ist jedoch mit Vorsicht zu genießen, da erstens nicht immer klar ist, ob diese Trefferquote sich auf den bekannte oder unbekannte Worte bezieht und zweitens der Nutzen eines POS-Taggers für viele Anwendungen noch mehr von der Genauigkeit abhängt, mit der er ganze Sätze vollständig tagged (siehe XXX).%mdk
-
-%mdk-data-line={75}
-\mdline{75}Es bietet sich an, einen Tagger, der nur die Häufigkeitsverteilung eines Wortes auf die Wortklassen betrachtet (unigram-most-likely), als Grundlage für die Untergrenze der angestrebten Genauigkeit zu wählen (erstmals vorgeschlagen von\mdline{75}~Gale et al.~(\mdcite{gale1992}{1992})\mdline{75}).%mdk
+%mdk-data-line={74}
+\mdline{74}Die naivste Methode ist, einfach jedem Wort die Wortart zuzuweisen, in der es statistisch am häufigsten auftritt. Das nützt zwar im Blick auf unbekannte Worte nichts, aber für mehrdeutige Wortarten verbessert diese Technik das Resultat deutlich.
+Zudem ist leicht einzusehen, dass auf diese Weise noch immer keine zufriedenstellende Genauigkeit erreicht werden kann; da gerade im Englischen viele Worte in mehr als einer Wortart jeweils häufig auftreten (z.b. fish).%mdk
 
 %mdk-data-line={77}
-\mdline{77}Die Genauigkeit dieses Verfahrens wurde (nach\mdline{77}~Charniak~(\mdcite{charniak1993}{1993})\mdline{77}) bei 90-91\% korrekt getaggter Worte ermittelt.%mdk
+\mdline{77}Um unbekannte Worte klassifizieren zu können, können gewisse Eigenschaften der Worte als betrachtet werden, in dem Versuch, aus diesen eine Wahrscheinlichkeit für unterschiedliche Wortarten abzuleiten, beispielsweise die Anzahl von Ziffern oder Großbuchstaben im Wort oder ob es einen Bindestrich enthält. Mit handgeschriebenen Regeln oder Maschinenlernverfahren kann dies in die Entscheidung für eine Wortart miteinfließen.%mdk
 
 %mdk-data-line={79}
-\mdline{79}Als Obergrenze der erreichbaren Genauigkeit wird üblicherweise der Gold Standard verwendet, in diesem Fall die Übereinstimmung menschlicher Experten. Diese beläuft sich auf etwa 96-97\% (nach\mdline{79}~Marcus et al.~(\mdcite{marcus1993}{1993})\mdline{79}).
-\mdline{80}(Voutilainen,~\mdcite{voutilainen1995}{1995})\mdline{80} hat jedoch herausgefunden, dass 100\% Übereinstimmung erreichbar sind, wenn die Experten sich absprechen. Daraus lässt sich ableiten, dass die Abweichungen nicht durch Mehrdeutigkeiten in der Sprache, sondern vielmehr durch Fehler der Experten zustande gekommen waren.\mdline{80}\mdline{80}
-Dies ist wichtig, da einige der heutigen POS-Tagger Genauigkeiten von 97\% erreichen, womit der Gold Standard ansonsten bereits erreicht wäre.%mdk
+\mdline{79}Der nächste Schritt ist, den syntaktischen Kontext des Wortes mit in die Klassifizierung einzubeziehen. Ein simples Beispiel hierfür ist, dass ein Substantiv nach einem Artikel wesentlich wahrscheinlicher ist, als ein Verb. Die Betrachtung eines größeren Kontextes um das Wort herum führt jedoch in der Regel zu proportional größerem Rechenaufwand.%mdk
+
+%mdk-data-line={81}
+\mdline{81}Dasselbe gilt in noch größerem Maße für das Einbeziehen des semantischen Kontextes. Dies erlaubt zwar einige Fälle zu entscheiden, in denen die Wortart rein syntaktisch nicht auflösbar wäre, aber der Aufwand hierfür ist so gewaltig, dass dies bei den meisten aktuellen POS-Taggern keine Rolle spielt.%mdk
 
 %mdk-data-line={83}
-\subsection{\mdline{83}2.4.\hspace*{0.5em}\mdline{83}Ansätze}\label{sec-anstze}%mdk%mdk
+\mdline{83}Die genannten Merkmale bilden zusammen die Eigenschaften auf deren Grundlage die meisten POS-Tagger trainiert werden.%mdk
 
 %mdk-data-line={85}
-\noindent\mdline{85}Es existieren zahllose Ansätze und Implementationen für POS-Tagger, sodass es schwierig ist, im Zuge dieses Artikels einen oder zumindest einige wenige herauszuheben, zumal selbst noch dann bei weitem zu viele Verfahren übrig bleiben, wenn man nur diejenigen mit der höchsten Genauigkeit betrachtet. Deshalb ist die folgende Auswahl von POS-Taggern einigermaßen willkürlich zusammengestellt, mit dem Ziel einen groben Einblick zu bieten.\mdline{85}\mdline{85}
-Auf die genaue Funktionsweise einzugehen würde den Rahmen dieser Arbeit jedoch sprengen, deshalb begnüge ich mich mit einigen wichtigen Eigenschaften, die der allgemeinen Einordnung der Verfahren dienen sollen.\mdline{86}\mdline{86}
-Die Daten zur Genauigkeit der Implementationen sind auf dem Teil der Penn Treebank, welcher auf Texten des \mdline{87}\emph{Wall Street Journal}\mdline{87} beruht, gemessen und der ACL-Wiki\mdline{87}\mdfootnote{1}{%mdk-data-line={120}
-%mdk-data-line={120}
-\noindent\mdline{120}https://www.aclweb.org/aclwiki/index.php?title=POS\mdline{120}\emph{Tagging}\mdline{120}(State\mdline{120}\_\mdline{120}of\mdline{120}\_\mdline{120}the\mdline{120}\_\mdline{120}art)\mdline{120}\#\mdline{120}WSJ%mdk
-\label{fn-aclwiki}%mdk%mdk
-}\mdline{87} entnommen.%mdk
+\subsection{\mdline{85}2.3.\hspace*{0.5em}\mdline{85}Genauigkeit}\label{sec-genauigkeit}%mdk%mdk
+
+%mdk-data-line={87}
+\noindent\mdline{87}Die Genauigkeit eines POS-Taggers wird in der Regel in \% der richtig eingeordneten Worte angegeben. Dieser Wert ist jedoch mit Vorsicht zu genießen, da erstens nicht immer klar ist, ob diese Trefferquote sich auf den bekannte oder unbekannte Worte bezieht und zweitens der Nutzen eines POS-Taggers für viele Anwendungen noch mehr von der Genauigkeit abhängt, mit der er ganze Sätze vollständig tagged (siehe XXX).%mdk
 
 %mdk-data-line={89}
-\subsubsection{\mdline{89}2.4.1.\hspace*{0.5em}\mdline{89}Hidden Markov Model (HMM)}\label{sec-hidden-markov-model-hmm}%mdk%mdk
+\mdline{89}Es bietet sich an, einen Tagger, der nur die Häufigkeitsverteilung eines Wortes auf die Wortklassen betrachtet (unigram-most-likely), als Grundlage für die Untergrenze der angestrebten Genauigkeit zu wählen (erstmals vorgeschlagen von\mdline{89}~Gale u. a.~(\mdcite{gale1992}{1992})\mdline{89}).%mdk
 
 %mdk-data-line={91}
-\noindent\mdline{91}Einige der frühen POS-Tagger basieren auf Hidden Markov Modellen. Bei diesem Verfahren wird jeweils ein nach Anzahl Worten begrenzter Kontext vor und/oder nach dem zu klassifizierenden Wort betrachtet und auf dieser Grundlage eine statistische Wahrscheinlichkeit für die jeweiligen WOrtarten ermittelt. Verwendet man für die Länge dieses Kontexts 1 (nur das betrachtete Wort), so erhält man eben das Modell, welches die Untergrenze der erstrebten Genauigkeit bildet (vlgl. XXX). Das Betrachten sehr großer Kontexte hingegen scheitert am Rechenaufwand, welcher exponentiell mit der Größe des Kontexts wächst.\mdline{91}\mdline{91}
-Ein POS-Tagger, der auf einem Hidden Markov Modell beruht, ist beispielsweise der TnT-Tagger\mdline{92}~(Brants,~\mdcite{brants2000}{2000})\mdline{92}, der eine Genauigkeit von 96,46\% erreicht.%mdk
+\mdline{91}Die Genauigkeit dieses Verfahrens wurde (nach\mdline{91}~Charniak~(\mdcite{charniak1993}{1993})\mdline{91}) bei 90-91\% korrekt getaggter Worte ermittelt.%mdk
 
-%mdk-data-line={94}
-\subsubsection{\mdline{94}2.4.2.\hspace*{0.5em}\mdline{94}Neuronale Netze}\label{sec-neuronale-netze}%mdk%mdk
+%mdk-data-line={93}
+\mdline{93}Als Obergrenze der erreichbaren Genauigkeit wird üblicherweise der Gold Standard verwendet, in diesem Fall die Übereinstimmung menschlicher Experten. Diese beläuft sich auf etwa 96-97\% (nach\mdline{93}~Marcus u. a.~(\mdcite{marcus1993}{1993})\mdline{93}).
+\mdline{94}(Voutilainen,~\mdcite{voutilainen1995}{1995})\mdline{94} hat jedoch herausgefunden, dass 100\% Übereinstimmung erreichbar sind, wenn die Experten sich absprechen. Daraus lässt sich ableiten, dass die Abweichungen nicht durch Mehrdeutigkeiten in der Sprache, sondern vielmehr durch Fehler der Experten zustande gekommen waren.\mdline{94}\mdline{94}
+Dies ist wichtig, da einige der heutigen POS-Tagger Genauigkeiten von 97\% erreichen, womit der Gold Standard ansonsten bereits erreicht wäre.%mdk
 
-%mdk-data-line={96}
-\noindent\mdline{96}Zahlreiche POS-Tagger\mdline{96} \mdline{96}- darunter einige mit Genauigkeiten über 97\%\mdline{96} \mdline{96}-beruhen auf verschiedenen Arten neuronaler Netze. Dabei sind diverse Varianten eines einfachen Perzeptrons ebenso vertreten, wie komplexere Netze; etwa Long-Short-Term-Memory-Netzwerke.\mdline{96}\mdline{96}
-Allen gemeinsam ist das grundlegende Verfahren: Die Wort wird mit bestimmten, ausgesuchten Eigenschaften kodiert und das neuronale Netz kombiniert die (in der Regel zahlreichen) Eigenschaften der einzelnen Worte solcherart zu Metaeigenschaften, dass diese möglichst viel über die Wortart des Wortes aussagen. Bevor das Neuronale Netz dies effizient tun kann, muss es mit bekannten Worten und ihren dazugehörigen Wortarten trainiert werden. Damit ist dies ein Fall von überwachtem Lernen.\mdline{97}\mdline{97}
-Wie bei allen Maschinenlern-Algorithmen ist bei diesem Verfahren eine Sorgfältige Auswahl der verwendeten Eigenschaften (Features) der Worte und ein gutes Preprocessing derselben essentiell. In einigen Fällen stellt das Neuronale Netz gar selbst nur einen weiteren Preprocessing-Schritt dar, der die Dimensionalität der Wort-Feature-Vektoren verringert (indem ein kleines Perceptronen-Layer auf ein großes folgt) und dabei möglichst viel vom Informationsgehalt der Daten bewahrt. Danach folgt dann der eigentliche Klassifizierer.\mdline{98}\mdline{98}
-Die besten Ergebnisse der auf Neuronalen Netzen basierenden POS-Tagger (namentlich das Bidirectional LSTM-CRF Model von\mdline{99}~Huang et al.~(\mdcite{huang2015}{2015})\mdline{99}) erreichen eine Genauigkeit von 97,55\% und gehören damit auch insgesamt zu den besten verfügbaren POS-Taggern.%mdk
+%mdk-data-line={97}
+\subsection{\mdline{97}2.4.\hspace*{0.5em}\mdline{97}Ansätze}\label{sec-anstze}%mdk%mdk
 
-%mdk-data-line={101}
-\subsubsection{\mdline{101}2.4.3.\hspace*{0.5em}\mdline{101}Nearest Neighbour Algorithmus}\label{sec-nearest-neighbour-algorithmus}%mdk%mdk
+%mdk-data-line={99}
+\noindent\mdline{99}Es existieren zahllose Ansätze und Implementationen für POS-Tagger, sodass es schwierig ist, im Zuge dieses Artikels einen oder zumindest einige wenige herauszuheben, zumal selbst noch dann bei weitem zu viele Verfahren übrig bleiben, wenn man nur diejenigen mit der höchsten Genauigkeit betrachtet. Deshalb ist die folgende Auswahl von POS-Taggern einigermaßen willkürlich zusammengestellt, mit dem Ziel einen groben Einblick zu bieten.\mdline{99}\mdline{99}
+Auf die genaue Funktionsweise einzugehen würde den Rahmen dieser Arbeit jedoch sprengen, deshalb begnüge ich mich mit einigen wichtigen Eigenschaften, die der allgemeinen Einordnung der Verfahren dienen sollen.\mdline{100}\mdline{100}
+Die Daten zur Genauigkeit der Implementationen sind auf dem Teil der Penn Treebank, welcher auf Texten des \mdline{101}\emph{Wall Street Journal}\mdline{101} beruht, gemessen und der ACL-Wiki\mdline{101}\mdfootnote{1}{%mdk-data-line={134}
+%mdk-data-line={134}
+\noindent\mdline{134}https://www.aclweb.org/aclwiki/index.php?title=POS\mdline{134}\emph{Tagging}\mdline{134}(State\mdline{134}\_\mdline{134}of\mdline{134}\_\mdline{134}the\mdline{134}\_\mdline{134}art)\mdline{134}\#\mdline{134}WSJ%mdk
+\label{fn-aclwiki}%mdk%mdk
+}\mdline{101} entnommen.%mdk
 
 %mdk-data-line={103}
-\noindent\mdline{103}Dieser Algorithmus beruht auf der simplen Idee, einem unbekannten Wort (das wieder als Vektor von Eigenschaften/Features angegeben ist) die Wortart des ähnlichsten, bereits bekannten Wortes (des \mdline{103}"\mdline{103}nächsten Nachbarn) zuzuweisen. In einer etwas verbesserten Form des Verfahrens werden aus den zur Klassifizierung verwendeten, bekannten Worten diejenigen aussortiert, die für die Einordnung keines der Worte in der Trainingsmenge relevant waren. In einem weiteren Optimierungsschritt, welcher in unüberwachtem Lernen besteht, werden aus einer unklassifizierten Wortmenge all jene Worte zum reduzierten Klassifizierer hinzugefügt, die mit diesem signifikant schlechter als mit dem ursprünglichen Nearest Neighbour Klassifizierer zugeordnet werden können.\mdline{103}\mdline{103}
-In dieser Form erreicht der Tagger eine Genauigkeit von 97,50\%. Er wurde von\mdline{104}~Søgaard~(\mdcite{sogaard2011}{2011})\mdline{104} entworfen.%mdk
+\subsubsection{\mdline{103}2.4.1.\hspace*{0.5em}\mdline{103}Hidden Markov Model (HMM)}\label{sec-hidden-markov-model-hmm}%mdk%mdk
 
-%mdk-data-line={106}
-\section{\mdline{106}3.\hspace*{0.5em}\mdline{106}Fazit}\label{sec-fazit}%mdk%mdk
+%mdk-data-line={105}
+\noindent\mdline{105}Einige der frühen POS-Tagger basieren auf Hidden Markov Modellen. Bei diesem Verfahren wird jeweils ein nach Anzahl Worten begrenzter Kontext vor und/oder nach dem zu klassifizierenden Wort betrachtet und auf dieser Grundlage eine statistische Wahrscheinlichkeit für die jeweiligen WOrtarten ermittelt. Verwendet man für die Länge dieses Kontexts 1 (nur das betrachtete Wort), so erhält man eben das Modell, welches die Untergrenze der erstrebten Genauigkeit bildet (vlgl. XXX). Das Betrachten sehr großer Kontexte hingegen scheitert am Rechenaufwand, welcher exponentiell mit der Größe des Kontexts wächst.\mdline{105}\mdline{105}
+Ein POS-Tagger, der auf einem Hidden Markov Modell beruht, ist beispielsweise der TnT-Tagger\mdline{106}~(Brants,~\mdcite{brants2000}{2000})\mdline{106}, der eine Genauigkeit von 96,46\% erreicht.%mdk
 
 %mdk-data-line={108}
-\noindent\mdline{108}Aufgrund der erreichten Trefferquoten aktueller POS-Tagger wird POS-Tagging oft als gelöstes Problem betrachtet. Dagegen ist jedoch einzuwenden, das%mdk
+\subsubsection{\mdline{108}2.4.2.\hspace*{0.5em}\mdline{108}Neuronale Netze}\label{sec-neuronale-netze}%mdk%mdk
 
 %mdk-data-line={110}
+\noindent\mdline{110}Zahlreiche POS-Tagger\mdline{110} \mdline{110}- darunter einige mit Genauigkeiten über 97\%\mdline{110} \mdline{110}-beruhen auf verschiedenen Arten neuronaler Netze. Dabei sind diverse Varianten eines einfachen Perzeptrons ebenso vertreten, wie komplexere Netze; etwa Long-Short-Term-Memory-Netzwerke.\mdline{110}\mdline{110}
+Allen gemeinsam ist das grundlegende Verfahren: Die Wort wird mit bestimmten, ausgesuchten Eigenschaften kodiert und das neuronale Netz kombiniert die (in der Regel zahlreichen) Eigenschaften der einzelnen Worte solcherart zu Metaeigenschaften, dass diese möglichst viel über die Wortart des Wortes aussagen. Bevor das Neuronale Netz dies effizient tun kann, muss es mit bekannten Worten und ihren dazugehörigen Wortarten trainiert werden. Damit ist dies ein Fall von überwachtem Lernen.\mdline{111}\mdline{111}
+Wie bei allen Maschinenlern-Algorithmen ist bei diesem Verfahren eine Sorgfältige Auswahl der verwendeten Eigenschaften (Features) der Worte und ein gutes Preprocessing derselben essentiell. In einigen Fällen stellt das Neuronale Netz gar selbst nur einen weiteren Preprocessing-Schritt dar, der die Dimensionalität der Wort-Feature-Vektoren verringert (indem ein kleines Perceptronen-Layer auf ein großes folgt) und dabei möglichst viel vom Informationsgehalt der Daten bewahrt. Danach folgt dann der eigentliche Klassifizierer.\mdline{112}\mdline{112}
+Die besten Ergebnisse der auf Neuronalen Netzen basierenden POS-Tagger (namentlich das Bidirectional LSTM-CRF Model von\mdline{113}~Huang u. a.~(\mdcite{huang2015}{2015})\mdline{113}) erreichen eine Genauigkeit von 97,55\% und gehören damit auch insgesamt zu den besten verfügbaren POS-Taggern.%mdk
+
+%mdk-data-line={115}
+\subsubsection{\mdline{115}2.4.3.\hspace*{0.5em}\mdline{115}Nearest Neighbour Algorithmus}\label{sec-nearest-neighbour-algorithmus}%mdk%mdk
+
+%mdk-data-line={117}
+\noindent\mdline{117}Dieser Algorithmus beruht auf der simplen Idee, einem unbekannten Wort (das wieder als Vektor von Eigenschaften/Features angegeben ist) die Wortart des ähnlichsten, bereits bekannten Wortes (des \mdline{117}"\mdline{117}nächsten Nachbarn) zuzuweisen. In einer etwas verbesserten Form des Verfahrens werden aus den zur Klassifizierung verwendeten, bekannten Worten diejenigen aussortiert, die für die Einordnung keines der Worte in der Trainingsmenge relevant waren. In einem weiteren Optimierungsschritt, welcher in unüberwachtem Lernen besteht, werden aus einer unklassifizierten Wortmenge all jene Worte zum reduzierten Klassifizierer hinzugefügt, die mit diesem signifikant schlechter als mit dem ursprünglichen Nearest Neighbour Klassifizierer zugeordnet werden können.\mdline{117}\mdline{117}
+In dieser Form erreicht der Tagger eine Genauigkeit von 97,50\%. Er wurde von\mdline{118}~Søgaard~(\mdcite{sogaard2011}{2011})\mdline{118} entworfen.%mdk
+
+%mdk-data-line={120}
+\section{\mdline{120}3.\hspace*{0.5em}\mdline{120}Fazit}\label{sec-fazit}%mdk%mdk
+
+%mdk-data-line={122}
+\noindent\mdline{122}Aufgrund der erreichten Trefferquoten aktueller POS-Tagger wird POS-Tagging oft als gelöstes Problem betrachtet. Dagegen ist jedoch einzuwenden, das%mdk
+
+%mdk-data-line={124}
 \begin{enumerate}[noitemsep,topsep=\mdcompacttopsep]%mdk
 
-%mdk-data-line={110}
-\item\mdline{110}eine Trefferquote von 97,50\% noch immer bedeutet, dass beispielsweise ein Satz mit 12 Worten nur zu 73,79\% vollständig richtig disambiguiert wird (der tatsächliche Wert dürfte noch niedriger sein, da es in einem langen Satz schwieriger ist, einzelne Worte zu klassifizieren, als in einem kurzen, da der Kontext komplexer wird) und%mdk
+%mdk-data-line={124}
+\item\mdline{124}eine Trefferquote von 97,50\% noch immer bedeutet, dass beispielsweise ein Satz mit 12 Worten nur zu 73,79\% vollständig richtig disambiguiert wird (der tatsächliche Wert dürfte noch niedriger sein, da es in einem langen Satz schwieriger ist, einzelne Worte zu klassifizieren, als in einem kurzen, da der Kontext komplexer wird) und%mdk
 
-%mdk-data-line={111}
-\item\mdline{111}es viele Gebiete gibt, in denen die Datenlage (d.h. die Verfügbarkeit guter Textkorpora) den Einsatz vieler POS-Tagger nur begrenzt zulässt oder zumindest ihre Genauigkeit schmälert. Dazu zählen sowohl viele Sprachen, zu denen es wenige Daten gibt, als auch speziellere Textsorten, wie 
+%mdk-data-line={125}
+\item\mdline{125}es viele Gebiete gibt, in denen die Datenlage (d.h. die Verfügbarkeit guter Textkorpora) den Einsatz vieler POS-Tagger nur begrenzt zulässt oder zumindest ihre Genauigkeit schmälert. Dazu zählen sowohl viele Sprachen, zu denen es wenige Daten gibt, als auch speziellere Textsorten, wie 
 
-%mdk-data-line={112}
+%mdk-data-line={126}
 \begin{itemize}[noitemsep,topsep=\mdcompacttopsep]%mdk
 
-%mdk-data-line={112}
-\item\mdline{112}gesprochene Sprache%mdk
+%mdk-data-line={126}
+\item\mdline{126}gesprochene Sprache%mdk
 
-%mdk-data-line={113}
-\item\mdline{113}Chatnachrichten%mdk
+%mdk-data-line={127}
+\item\mdline{127}Chatnachrichten%mdk
 
-%mdk-data-line={114}
-\item\mdline{114}etc.%mdk
+%mdk-data-line={128}
+\item\mdline{128}etc.%mdk
 %mdk
 \end{itemize}%mdk
-\mdline{116}Für diese Textsorten werden mitunter deutlich schlechtere Ergebnisse erziehlt.%mdk
+\mdline{130}Für diese Textsorten werden mitunter deutlich schlechtere Ergebnisse erziehlt.%mdk
 %mdk
 \end{enumerate}%mdk
 
-%mdk-data-line={118}
-\noindent\mdline{118}Aus diesem Grund halte ich es für voreilig, POS-Tagging als vollends gelöstes Problem zu betrachten, auch wenn die aktuellen Resultate bereits viele Zwecken genügen.%mdk
+%mdk-data-line={132}
+\noindent\mdline{132}Aus diesem Grund halte ich es für voreilig, POS-Tagging als vollends gelöstes Problem zu betrachten, auch wenn die aktuellen Resultate bereits viele Zwecken genügen.%mdk
 
-%mdk-data-line={122;out/paper-bib.bbl.mdk:1}
-%mdk-data-line={122;out/paper-bib.bbl.mdk:2}
+%mdk-data-line={137;out/paper-bib.bbl.mdk:1}
+%mdk-data-line={137;out/paper-bib.bbl.mdk:2}
 \mdsetrefname{References}%mdk
 {\mdbibindent{0}%mdk
 \begin{thebibliography}{8}%mdk
 \label{sec-bibliography}%mdk
 
 %mdk-data-line={sources.bib:39}
-\bibitem{brants2000}Thorsten Brants. \textquotedblleft{}TnT \textendash{} Statistical Part-of-Speech Tagging.\textquotedblright{} 2000. \href{http://www.coli.uni-saarland.de/~thorsten/tnt/}{{\ttfamily http://\hspace{0pt}www.\hspace{0pt}coli.\hspace{0pt}uni-\hspace{0pt}saarland.\hspace{0pt}de/\hspace{0pt}\textasciitilde{}thorsten/\hspace{0pt}tnt/\hspace{0pt}}}.\label{brants2000}%mdk%mdk
+\bibitem{brants2000}Thorsten Brants. \textquotedblleft{}TnT \textendash{} Statistical Part-of-Speech Tagging\textquotedblright{}. 2000. \href{http://www.coli.uni-saarland.de/~thorsten/tnt/}{{\ttfamily http://\hspace{0pt}www.\hspace{0pt}coli.\hspace{0pt}uni-\hspace{0pt}saarland.\hspace{0pt}de/\hspace{0pt}\textasciitilde{}thorsten/\hspace{0pt}tnt/\hspace{0pt}}}.\label{brants2000}%mdk%mdk
 
 %mdk-data-line={sources.bib:23}
-\bibitem{charniak1993}Eugene Charniak. \textquotedblleft{}Statistical Language Learning.\textquotedblright{} 1993.\label{charniak1993}%mdk%mdk
+\bibitem{charniak1993}Eugene Charniak. \textquotedblleft{}Statistical Language Learning\textquotedblright{}. 1993.\label{charniak1993}%mdk%mdk
 
 %mdk-data-line={sources.bib:17}
-\bibitem{gale1992}William Gale, Kenneth Ward Church, and Yarowsky David. \textquotedblleft{}Estimating Upper and Lower Bounds on the Performance of Word-Sense Disambiguation Programs.\textquotedblright{} 1992.\label{gale1992}%mdk%mdk
+\bibitem{gale1992}William Gale, Kenneth Ward Church, und Yarowsky David. \textquotedblleft{}Estimating Upper and Lower Bounds on the Performance of Word-Sense Disambiguation Programs\textquotedblright{}. 1992.\label{gale1992}%mdk%mdk
 
 %mdk-data-line={sources.bib:50}
-\bibitem{huang2015}Zhiheng Huang, Wei Xu, and Kai Yu. \textquotedblleft{}Bidirectional LSTM-CRF Models for Sequence Tagging.\textquotedblright{} 2015.\label{huang2015}%mdk%mdk
+\bibitem{huang2015}Zhiheng Huang, Wei Xu, und Kai Yu. \textquotedblleft{}Bidirectional LSTM-CRF Models for Sequence Tagging\textquotedblright{}. 2015.\label{huang2015}%mdk%mdk
 
 %mdk-data-line={sources.bib:29}
-\bibitem{marcus1993}Mitchell P.~Marcus, Beatrice Santorini, and Mary Ann Marcinkiewicz. \textquotedblleft{}Building a Large Annotated Corpus of English: The Penn Treebank.\textquotedblright{} 1993.\label{marcus1993}%mdk%mdk
+\bibitem{marcus1993}Mitchell P.~Marcus, Beatrice Santorini, und Mary Ann Marcinkiewicz. \textquotedblleft{}Building a Large Annotated Corpus of English: The Penn Treebank\textquotedblright{}. 1993.\label{marcus1993}%mdk%mdk
 
 %mdk-data-line={sources.bib:56}
-\bibitem{sogaard2011}Anders Søgaard. \textquotedblleft{}Semi-Supervised Condensed Nearest Neighbor for Part-of-Speech Tagging.\textquotedblright{} 2011.\label{sogaard2011}%mdk%mdk
+\bibitem{sogaard2011}Anders Søgaard. \textquotedblleft{}Semi-Supervised Condensed Nearest Neighbor for Part-of-Speech Tagging\textquotedblright{}. 2011.\label{sogaard2011}%mdk%mdk
 
 %mdk-data-line={sources.bib:35}
 \bibitem{voutilainen1995}Atro Voutilainen. 1995.\label{voutilainen1995}%mdk%mdk

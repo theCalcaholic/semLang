@@ -27,21 +27,14 @@ Locale        : german
 
 **Abstract**
 
-Ich erkläre die grundlegende Aufgabe von Part-Of-Speech-Tagging und die allgemeine Herangehensweise inklusive einiger konkreter Beispiele.</br>
-Diese Arbeit soll nicht dazu dienen, POS-Tagging-Verfahren in ihrer Tiefe zu erklären, sondern das Aufgabenfeld einordnen zu können.
-
-~ Begin Columns
-~ Column
+Ich stelle in dieser Arbeit die grundlegende Aufgabe von Part-Of-Speech-Tagging und die allgemeine Herangehensweise, sowie einiger konkreter Beispiele dar.</br>
+Diese Arbeit soll nicht dazu dienen, konkrete POS-Tagging-Verfahren in ihrer Tiefe zu erklären, sondern das die Problemstellung einordnen zu können.
 
 # Einleitung
-## POS-Tagging: Definition
 
 POS-Tagging ("Part-Of-Speech-Tagging") bezeichnet das Versehen der Worte innerhalb eines Textes mit den zugehörigen Wortarten. Diese Informationen werden an die Worte in Form von sogenannten Tags angefügt, daher der Name.
 Als Grundlage für die Entscheidung, zu welcher Wortart ein Wort gehört, werden Wörterbücher, Syntax, der Kontext und statistische Analysen herangezogen.
 Ist ein Wort erst einmal mit der zugehörigen Wortart versehen, kann dies für vielfältige weitere Aufgaben im Bereich des Natural Language Processing nützlich sein - so lässt sich zum Beispiel in einigen Fällen eine semantische Mehrdeutigkeit durch Kenntnis der Wortart auflösen.
-
-## Ziel der Arbeit
-In dieser Arbeit versuche ich, eine möglichste breite Übersicht über den aktuellen Stand des POS-Tagging zu geben.</br>
 
 # Verfahren
 
@@ -76,12 +69,10 @@ Der nächste Schritt ist, den syntaktischen Kontext des Wortes mit in die Klassi
 Dasselbe gilt in noch größerem Maße für das Einbeziehen des semantischen Kontextes. Dies erlaubt zwar einige Fälle zu entscheiden, in denen die Wortart rein syntaktisch nicht auflösbar wäre, aber der Aufwand hierfür ist so gewaltig, dass dies bei den meisten aktuellen POS-Taggern keine Rolle spielt.
 
 Die genannten Merkmale bilden zusammen die Eigenschaften auf deren Grundlage die meisten POS-Tagger trainiert werden.
-~
-~ Column
 
 ## Genauigkeit
 
-Die Genauigkeit eines POS-Taggers wird in der Regel in % der richtig eingeordneten Worte angegeben. Dieser Wert ist jedoch mit Vorsicht zu genießen, da erstens nicht immer klar ist, ob diese Trefferquote sich auf den bekannte oder unbekannte Worte bezieht und zweitens der Nutzen eines POS-Taggers für viele Anwendungen noch mehr von der Genauigkeit abhängt, mit der er ganze Sätze vollständig tagged (siehe XXX).
+Die Genauigkeit eines POS-Taggers wird in der Regel in % der richtig eingeordneten Worte angegeben. Dieser Wert ist jedoch mit Vorsicht zu genießen, da erstens nicht immer klar ist, ob diese Trefferquote sich auf den bekannte oder unbekannte Worte bezieht und zweitens der Nutzen eines POS-Taggers für viele Anwendungen noch mehr von der Genauigkeit abhängt, mit der er ganze Sätze vollständig tagged.
 
 Es bietet sich an, einen Tagger, der nur die Häufigkeitsverteilung eines Wortes auf die Wortklassen betrachtet (unigram-most-likely), als Grundlage für die Untergrenze der angestrebten Genauigkeit zu wählen (erstmals vorgeschlagen von @Gale1992).
 
@@ -99,7 +90,7 @@ Die Daten zur Genauigkeit der Implementationen sind auf dem Teil der Penn Treeba
 
 ### Hidden Markov Model (HMM)
 
-Einige der frühen POS-Tagger basieren auf Hidden Markov Modellen. Bei diesem Verfahren wird jeweils ein nach Anzahl Worten begrenzter Kontext vor und/oder nach dem zu klassifizierenden Wort betrachtet und auf dieser Grundlage eine statistische Wahrscheinlichkeit für die jeweiligen WOrtarten ermittelt. Verwendet man für die Länge dieses Kontexts 1 (nur das betrachtete Wort), so erhält man eben das Modell, welches die Untergrenze der erstrebten Genauigkeit bildet (vlgl. XXX). Das Betrachten sehr großer Kontexte hingegen scheitert am Rechenaufwand, welcher exponentiell mit der Größe des Kontexts wächst.</br>
+Einige der frühen POS-Tagger basieren auf Hidden Markov Modellen. Bei diesem Verfahren wird jeweils ein nach Anzahl Worten begrenzter Kontext vor und/oder nach dem zu klassifizierenden Wort betrachtet und auf dieser Grundlage eine statistische Wahrscheinlichkeit für die jeweiligen Wortarten ermittelt. Verwendet man für die Länge dieses Kontexts 1 (nur das betrachtete Wort), so erhält man eben das Modell, welches die Untergrenze der erstrebten Genauigkeit bildet (vlgl. 2.3). Das Betrachten sehr großer Kontexte hingegen scheitert am Rechenaufwand, welcher exponentiell mit der Größe des Kontexts wächst.</br>
 Ein POS-Tagger, der auf einem Hidden Markov Modell beruht, ist beispielsweise der TnT-Tagger [@Brants2000], der eine Genauigkeit von 96,46% erreicht.
 
 ### Neuronale Netze
@@ -130,8 +121,6 @@ Aus diesem Grund halte ich es für voreilig, POS-Tagging als vollends gelöstes 
 
 [^aclwiki]: https://www.aclweb.org/aclwiki/index.php?title=POS_Tagging_(State_of_the_art)#WSJ
 
-~
-~ End Columns
 
 [BIB]
 
