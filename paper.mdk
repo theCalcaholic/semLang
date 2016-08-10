@@ -1,24 +1,30 @@
-Title         : POS-Tagging
-Author        : Tobias Knöppler
+Title         : Überblick über die Aufgabe des POS-Tagging und bestehende Lösungen
+Author        : Tobias Knöppler </br> Fachbereich Informatik, Uni Hamburg
 Logo          : False
+Bibliography  : sources.bib
+Cite Style    : natural
+name-contents : Inhaltsverzeichnis
+
+
+~ Center {font-size:18pt}
+Seminararbeit zum Thema Sprachverarbeitung
+~
+
+&br;
+
+------
+
+&br;
 
 [TITLE]
 
-**Gliederung**
+&pagebreak;
 
-- POS-Tagging
-  - Definition
-  - Nutzen
-- Anforderung, Genauigkeit, aktueller Stand
-  - Grundlegende Herausforderungen/Verbesserungen
-- Ansätze
-  - Kategorisierung
-  - Vergleich
-- Fazit/Ausblick
-  - Solved?
-  - spezielle Herausforderungen
-  - zukuenftige Bedeutung
+[TOC]
 
+&pagebreak;
+
+&pagebreak;
 
 # Einleitung
 ## POS-Tagging: Definition
@@ -27,11 +33,11 @@ POS-Tagging ("Part-Of-Speech-Tagging") bezeichnet das Versehen der Worte innerha
 Als Grundlage für die Entscheidung, zu welcher Wortart ein Wort gehört, werden Wörterbücher, Syntax, der Kontext und statistische Analysen herangezogen.
 Ist ein Wort erst einmal mit der zugehörigen Wortart versehen, kann dies für vielfältige weitere Aufgaben im Bereich des Natural Language Processing nützlich sein - so lässt sich zum Beispiel in einigen Fällen eine semantische Mehrdeutigkeit durch Kenntnis der Wortart auflösen.
 
-## Fragestellung
+## Ziel der Arbeit
+In dieser Arbeit versuche ich, eine möglichste breite Übersicht über den aktuellen Stand des POS-Tagging zu geben.</br>
 
-Ich versuche, in dieser Arbeit die Frage zu beantworten, ob POS-Tagging als gelöstes Problem betrachtet werden kann.
 
-# Die Aufgabe
+# Verfahren
 
 ## Text-Korpora
 Der Schwierigkeitsgrad, ebenso wie der Nutzen von POS-Tagging wird sehr stark durch das verwendete Tag-Set bestimmt. Die bereits aus der Schule bekannten Wortarten werden hier in der Regel wesentlich genauer spezifiert, um einen größeren Nutzen aus den Tags ziehen zu können.
@@ -46,9 +52,9 @@ Ein prominenter Korpus für die englische Sprache ist beispielsweise der British
 
 Ein weiterer Korpus ist die Penn Treebank (PTB). Dieser Korpus entstand, indem Textsammlungen geparsed und im Nachhinein manuell korrigiert wurden. Er ist zusammengesetzt aus verschiedenen Textquellen, darunter der gesamte Brown Corpus, eine Sammlung von Telefonattransskripten, etwa einer Million Worten aus Zeitungstexten des Wall Street Journal, et cetera. Der gesamte Korpus ist mit POS-Tags versehen, während etwa zwei Drittel zusätzlich vollständig geparsed ist (d.h. es wurde ein Syntaxbaum für jeden Satz erzeugt).
 
-Für die deutsche Sprache gibt es zum Beispiel den TIGER Corpus, der aus etwa 900.000 Worten aus schriftlichen Nachrichtentexten der Frankfurter Rundschau aufgebaut ist.
+Für die deutsche Sprache gibt es zum Beispiel den TIGER Corpus, der aus etwa 900.000 Worten aus schriftlichen Nachrichtentexten der Frankfurter Rundschau aufgebaut ist [-@imsWeb].
 
-## Grundlegende Herangehensweisen
+## Entscheidungsgrundlagen
 Oft lässt sich die Wortart direkt von einem Wort ableiten - ohne weitere Informationen zu berücksichtigen. Das ist dann der Fall, wenn das Wort in einem Wörterbuch enthalten (also bereits bekannt) ist und es nur eine einzige Wortart haben kann (d.h. keine Mehrdeutigkeit der Wortart besteht).</br>
 Leider ist in den meisten kein ausreichend vollständiges Wörterbuch verfügbar. Die eigentliche Herausforderung bilden deshalb die übrigen Worte, also unbekannte Worte und solche, die mehreren Wortarten zugehörig sein können. Im deutschen ist die erste Kategorie besonders groß, da es eine unendliche Zahl valider, zusammengesetzter Worte gibt, was ein vollständiges Wörterbuch unmöglich macht. In der englischen Sprache spielen zusammengesetzte Worte zwar eine kleinere Rolle, aber dafür existieren zahlreiche Worte, die mehreren Wortarten angehören können, insbesondere, da Substantive sich nicht durch Großschreibung von anderen Wortarten abheben.
 
@@ -63,18 +69,58 @@ Der nächste Schritt ist, den syntaktischen Kontext des Wortes mit in die Klassi
 
 Dasselbe gilt in noch größerem Maße für das Einbeziehen des semantischen Kontextes. Dies erlaubt zwar einige Fälle zu entscheiden, in denen die Wortart rein syntaktisch nicht auflösbar wäre, aber der Aufwand hierfür ist so gewaltig, dass dies bei den meisten aktuellen POS-Taggern keine Rolle spielt.
 
-## Status Quo
+Die genannten Merkmale bilden zusammen die Eigenschaften auf deren Grundlage die meisten POS-Tagger trainiert werden.
 
+## Genauigkeit
 
+Die Genauigkeit eines POS-Taggers wird in der Regel in % der richtig eingeordneten Worte angegeben. Dieser Wert ist jedoch mit Vorsicht zu genießen, da erstens nicht immer klar ist, ob diese Trefferquote sich auf den bekannte oder unbekannte Worte bezieht und zweitens der Nutzen eines POS-Taggers für viele Anwendungen noch mehr von der Genauigkeit abhängt, mit der er ganze Sätze vollständig tagged (siehe XXX).
 
-**Sources**
+Es bietet sich an, einen Tagger, der nur die Häufigkeitsverteilung eines Wortes auf die Wortklassen betrachtet (unigram-most-likely), als Grundlage für die Untergrenze der angestrebten Genauigkeit zu wählen (erstmals vorgeschlagen von @Gale1992).
 
-* test [p. 3][#tigerscheme]
-* [well-known and influential corpora: a survey]
+Die Genauigkeit dieses Verfahrens wurde (nach @Charniak1993) bei 90-91% korrekt getaggter Worte ermittelt.
 
-[//]: # (////////////////////////////////////)
-[//]: # (Source Definitions)
-[//]: # (////////////////////////////////////)
+Als Obergrenze der erreichbaren Genauigkeit wird üblicherweise der Gold Standard verwendet, in diesem Fall die Übereinstimmung menschlicher Experten. Diese beläuft sich auf etwa 96-97% (nach @Marcus1993).
+[@Voutilainen1995] hat jedoch herausgefunden, dass 100% Übereinstimmung erreichbar sind, wenn die Experten sich absprechen. Daraus lässt sich ableiten, dass die Abweichungen nicht durch Mehrdeutigkeiten in der Sprache, sondern vielmehr durch Fehler der Experten zustande gekommen waren.</br>
+Dies ist wichtig, da einige der heutigen POS-Tagger Genauigkeiten von 97% erreichen, womit der Gold Standard ansonsten bereits erreicht wäre.
 
-[#tigerscheme]: TIGER-Annotationsschema
-[Well-known and influential corpora: A survey]: http://www.lancaster.ac.uk/staff/xiaoz/papers/corpus%20survey.htm
+## Ansätze
+
+Es existieren zahllose Ansätze und Implementationen für POS-Tagger, sodass es schwierig ist, im Zuge dieses Artikels einen oder zumindest einige wenige herauszuheben, zumal selbst noch dann bei weitem zu viele Verfahren übrig bleiben, wenn man nur diejenigen mit der höchsten Genauigkeit betrachtet. Deshalb ist die folgende Auswahl von POS-Taggern einigermaßen willkürlich zusammengestellt, mit dem Ziel einen groben Einblick zu bieten.</br>
+Auf die genaue Funktionsweise einzugehen würde den Rahmen dieser Arbeit jedoch sprengen, deshalb begnüge ich mich mit einigen wichtigen Eigenschaften, die der allgemeinen Einordnung der Verfahren dienen sollen.</br>
+Die Daten zur Genauigkeit der Implementationen sind auf dem Teil der Penn Treebank, welcher auf Texten des *Wall Street Journal* beruht, gemessen und der ACL-Wiki[^aclwiki] entnommen.
+
+### Hidden Markov Model (HMM)
+
+Einige der frühen POS-Tagger basieren auf Hidden Markov Modellen. Bei diesem Verfahren wird jeweils ein nach Anzahl Worten begrenzter Kontext vor und/oder nach dem zu klassifizierenden Wort betrachtet und auf dieser Grundlage eine statistische Wahrscheinlichkeit für die jeweiligen WOrtarten ermittelt. Verwendet man für die Länge dieses Kontexts 1 (nur das betrachtete Wort), so erhält man eben das Modell, welches die Untergrenze der erstrebten Genauigkeit bildet (vlgl. XXX). Das Betrachten sehr großer Kontexte hingegen scheitert am Rechenaufwand, welcher exponentiell mit der Größe des Kontexts wächst.</br>
+Ein POS-Tagger, der auf einem Hidden Markov Modell beruht, ist beispielsweise der TnT-Tagger [@Brants2000], der eine Genauigkeit von 96,46% erreicht.
+
+### Neuronale Netze
+
+Zahlreiche POS-Tagger - darunter einige mit Genauigkeiten über 97% -beruhen auf verschiedenen Arten neuronaler Netze. Dabei sind diverse Varianten eines einfachen Perzeptrons ebenso vertreten, wie komplexere Netze; etwa Long-Short-Term-Memory-Netzwerke.</br>
+Allen gemeinsam ist das grundlegende Verfahren: Die Wort wird mit bestimmten, ausgesuchten Eigenschaften kodiert und das neuronale Netz kombiniert die (in der Regel zahlreichen) Eigenschaften der einzelnen Worte solcherart zu Metaeigenschaften, dass diese möglichst viel über die Wortart des Wortes aussagen. Bevor das Neuronale Netz dies effizient tun kann, muss es mit bekannten Worten und ihren dazugehörigen Wortarten trainiert werden. Damit ist dies ein Fall von überwachtem Lernen.</br>
+Wie bei allen Maschinenlern-Algorithmen ist bei diesem Verfahren eine Sorgfältige Auswahl der verwendeten Eigenschaften (Features) der Worte und ein gutes Preprocessing derselben essentiell. In einigen Fällen stellt das Neuronale Netz gar selbst nur einen weiteren Preprocessing-Schritt dar, der die Dimensionalität der Wort-Feature-Vektoren verringert (indem ein kleines Perceptronen-Layer auf ein großes folgt) und dabei möglichst viel vom Informationsgehalt der Daten bewahrt. Danach folgt dann der eigentliche Klassifizierer.</br>
+Die besten Ergebnisse der auf Neuronalen Netzen basierenden POS-Tagger (namentlich das Bidirectional LSTM-CRF Model von @Huang2015) erreichen eine Genauigkeit von 97,55% und gehören damit auch insgesamt zu den besten verfügbaren POS-Taggern.
+
+### Nearest Neighbour Algorithmus
+
+Dieser Algorithmus beruht auf der simplen Idee, einem unbekannten Wort (das wieder als Vektor von Eigenschaften/Features angegeben ist) die Wortart des ähnlichsten, bereits bekannten Wortes (des "nächsten Nachbarn) zuzuweisen. In einer etwas verbesserten Form des Verfahrens werden aus den zur Klassifizierung verwendeten, bekannten Worten diejenigen aussortiert, die für die Einordnung keines der Worte in der Trainingsmenge relevant waren. In einem weiteren Optimierungsschritt, welcher in unüberwachtem Lernen besteht, werden aus einer unklassifizierten Wortmenge all jene Worte zum reduzierten Klassifizierer hinzugefügt, die mit diesem signifikant schlechter als mit dem ursprünglichen Nearest Neighbour Klassifizierer zugeordnet werden können.</br>
+In dieser Form erreicht der Tagger eine Genauigkeit von 97,50%. Er wurde von @Sogaard2011 entworfen.
+
+# Fazit
+
+Aufgrund der erreichten Trefferquoten aktueller POS-Tagger wird POS-Tagging oft als gelöstes Problem betrachtet. Dagegen ist jedoch einzuwenden, das
+
+1. eine Trefferquote von 97,50% noch immer bedeutet, dass beispielsweise ein Satz mit 12 Worten nur zu 73,79% vollständig richtig disambiguiert wird (der tatsächliche Wert dürfte noch niedriger sein, da es in einem langen Satz schwieriger ist, einzelne Worte zu klassifizieren, als in einem kurzen, da der Kontext komplexer wird) und
+2. es viele Gebiete gibt, in denen die Datenlage (d.h. die Verfügbarkeit guter Textkorpora) den Einsatz vieler POS-Tagger nur begrenzt zulässt oder zumindest ihre Genauigkeit schmälert. Dazu zählen sowohl viele Sprachen, zu denen es wenige Daten gibt, als auch speziellere Textsorten, wie 
+  * gesprochene Sprache
+  * Chatnachrichten
+  * etc.
+  
+Für diese Textsorten werden mitunter deutlich schlechtere Ergebnisse erziehlt.
+
+Aus diesem Grund halte ich es für voreilig, POS-Tagging als vollends gelöstes Problem zu betrachten, auch wenn die aktuellen Resultate bereits viele Zwecken genügen.
+
+[^aclwiki]: https://www.aclweb.org/aclwiki/index.php?title=POS_Tagging_(State_of_the_art)#WSJ
+
+[BIB]
+

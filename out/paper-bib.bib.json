@@ -1,0 +1,311 @@
+{
+  "_preamble": "",
+  "_comments": "",
+  "tigeranno": {
+    "id": "tigerAnno",
+    "type": "article-journal",
+    "author": [
+      {
+        "family": "Albert",
+        "given": "Stefanie"
+      },
+      {
+        "family": "Anderssen",
+        "given": "Jan"
+      },
+      {
+        "family": "Bader",
+        "given": "Regine"
+      },
+      {
+        "family": "Becker",
+        "given": "Stephanie"
+      },
+      {
+        "family": "Bracht",
+        "given": "Tobias"
+      },
+      {
+        "family": "Brants",
+        "given": "Sabine"
+      },
+      {
+        "family": "Brants",
+        "given": "Thorsten"
+      },
+      {
+        "family": "Demberg",
+        "given": "Vera"
+      },
+      {
+        "family": "Dipper",
+        "given": "Stefanie"
+      },
+      {
+        "family": "Eisenberg",
+        "given": "Peter"
+      },
+      {
+        "family": "Hansen",
+        "given": "Silvia"
+      },
+      {
+        "family": "Hirschmann",
+        "given": "Hagen"
+      },
+      {
+        "family": "Janitzek",
+        "given": "Juliane"
+      },
+      {
+        "family": "Kirstein",
+        "given": "Carolin"
+      },
+      {
+        "family": "Langner",
+        "given": "Robert"
+      },
+      {
+        "family": "Michelbacher",
+        "given": "Lukas"
+      },
+      {
+        "family": "Plaehn",
+        "given": "Oliver"
+      },
+      {
+        "family": "Preis",
+        "given": "Cordula"
+      },
+      {
+        "family": "Pußel",
+        "given": "Marcus"
+      },
+      {
+        "family": "Rower",
+        "given": "Marco"
+      },
+      {
+        "family": "Schrader",
+        "given": "Bettina"
+      },
+      {
+        "family": "Schwartz",
+        "given": "Anne"
+      },
+      {
+        "family": "Smith",
+        "given": "George"
+      },
+      {
+        "family": "Uszkoreit",
+        "given": "Hans"
+      }
+    ],
+    "title": "TIGER Annotationsschema",
+    "issued": {
+      "date-parts": [
+        [
+          "2003",
+          "7"
+        ]
+      ]
+    },
+    "_line": "sources.bib:1"
+  },
+  "xiao2005": {
+    "id": "xiao2005",
+    "type": "webpage",
+    "author": [
+      {
+        "family": "Xiao",
+        "given": "Richard"
+      }
+    ],
+    "title": "Well-known and influential corpora: A survey",
+    "issued": {
+      "date-parts": [
+        [
+          "2005"
+        ]
+      ]
+    },
+    "URL": "http://www.lancaster.ac.uk/staff/xiaoz/papers/corpus%20survey.htm",
+    "_line": "sources.bib:8"
+  },
+  "imsweb": {
+    "id": "imsWeb",
+    "type": "webpage",
+    "URL": "http://www.ims.uni-stuttgart.de/",
+    "_line": "sources.bib:14"
+  },
+  "gale1992": {
+    "id": "Gale1992",
+    "type": "article-journal",
+    "author": [
+      {
+        "family": "Gale",
+        "given": "William"
+      },
+      {
+        "family": "Church",
+        "given": "Kenneth Ward"
+      },
+      {
+        "family": "David",
+        "given": "Yarowsky"
+      }
+    ],
+    "title": "Estimating Upper and Lower Bounds on the Performance of Word-Sense Disambiguation Programs",
+    "issued": {
+      "date-parts": [
+        [
+          "1992"
+        ]
+      ]
+    },
+    "_line": "sources.bib:17"
+  },
+  "charniak1993": {
+    "id": "Charniak1993",
+    "type": "article-journal",
+    "author": [
+      {
+        "family": "Charniak",
+        "given": "Eugene"
+      }
+    ],
+    "title": "Statistical language learning",
+    "issued": {
+      "date-parts": [
+        [
+          "1993"
+        ]
+      ]
+    },
+    "_line": "sources.bib:23"
+  },
+  "marcus1993": {
+    "id": "Marcus1993",
+    "type": "article-journal",
+    "author": [
+      {
+        "family": "Marcus",
+        "given": "Mitchell P."
+      },
+      {
+        "family": "Santorini",
+        "given": "Beatrice"
+      },
+      {
+        "family": "Marcinkiewicz",
+        "given": "Mary Ann"
+      }
+    ],
+    "title": "Building a Large Annotated Corpus of English: The Penn Treebank",
+    "issued": {
+      "date-parts": [
+        [
+          "1993"
+        ]
+      ]
+    },
+    "_line": "sources.bib:29"
+  },
+  "voutilainen1995": {
+    "id": "Voutilainen1995",
+    "type": "article-journal",
+    "author": [
+      {
+        "family": "Voutilainen",
+        "given": "Atro"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          "1995"
+        ]
+      ]
+    },
+    "_line": "sources.bib:35"
+  },
+  "brants2000": {
+    "id": "Brants2000",
+    "type": "webpage",
+    "author": [
+      {
+        "family": "Brants",
+        "given": "Thorsten"
+      }
+    ],
+    "title": "TnT &ndash; Statistical Part-of-Speech Tagging",
+    "issued": {
+      "date-parts": [
+        [
+          "2000"
+        ]
+      ]
+    },
+    "URL": "http://www.coli.uni-saarland.de/~thorsten/tnt/",
+    "_line": "sources.bib:39"
+  },
+  "aclwiki": {
+    "id": "aclwiki",
+    "type": "webpage",
+    "author": [
+      {
+        "family": "ACLWIKI"
+      }
+    ],
+    "title": "ACLWiki: POS-Tagging (State of the Art)",
+    "URL": "https://www.aclweb.org/aclwiki/index.php?title=POS_Tagging_(State_of_the_art)#WSJ",
+    "_line": "sources.bib:45"
+  },
+  "huang2015": {
+    "id": "Huang2015",
+    "type": "article-journal",
+    "author": [
+      {
+        "family": "Huang",
+        "given": "Zhiheng"
+      },
+      {
+        "family": "Xu",
+        "given": "Wei"
+      },
+      {
+        "family": "Yu",
+        "given": "Kai"
+      }
+    ],
+    "title": "Bidirectional LSTM-CRF Models for Sequence Tagging",
+    "issued": {
+      "date-parts": [
+        [
+          "2015"
+        ]
+      ]
+    },
+    "_line": "sources.bib:50"
+  },
+  "sogaard2011": {
+    "id": "Sogaard2011",
+    "type": "article-journal",
+    "author": [
+      {
+        "family": "Søgaard",
+        "given": "Anders"
+      }
+    ],
+    "title": "Semi-supervised condensed nearest neighbor for part-of-speech tagging",
+    "issued": {
+      "date-parts": [
+        [
+          "2011"
+        ]
+      ]
+    },
+    "_line": "sources.bib:56"
+  }
+}
