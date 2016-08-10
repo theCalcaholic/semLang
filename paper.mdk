@@ -10,6 +10,7 @@ Cite Style    : natural
 name-contents : Inhaltsverzeichnis
 Locale        : german
 
+&br;
 
 [TITLE]
 
@@ -25,10 +26,11 @@ Locale        : german
 
 &pagebreak;
 
-**Abstract**
-
+~ Abstract
+&br;
 Ich stelle in dieser Arbeit die grundlegende Aufgabe von Part-Of-Speech-Tagging und die allgemeine Herangehensweise, sowie einiger konkreter Beispiele dar.</br>
 Diese Arbeit soll nicht dazu dienen, konkrete POS-Tagging-Verfahren in ihrer Tiefe zu erklären, sondern das die Problemstellung einordnen zu können.
+~
 
 # Einleitung
 
