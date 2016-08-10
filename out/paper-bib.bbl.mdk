@@ -1,33 +1,33 @@
 ~ begin bibliography { .bib-numeric; cite-style:"numeric:'[',']',', '" ; caption:"8" ; data-style:"numeric" ; data-style:'madoko-numeric';  }
 ~ begin bibitem {id:"Brants2000"; cite-year:"2000"; cite-authors:"Brants"; cite-authors-long:"Brants"; cite-label:"1"; caption:"TnT &ndash; Statistical Part-of-Speech Tagging&nl;Brants, 2000"; data-line:"sources.bib:39"; searchterm:"TnT%20%26ndash%3B%20Statistical%20PartofSpeech%20Tagging%20Brants%2C%202000"; bibitem-label:"\[1\]"}
-\/Thorsten Brants. &ldquo;TnT &ndash; Statistical Part-of-Speech Tagging.&rdquo; 2000. <http://www.coli.uni-saarland.de/~thorsten/tnt/>{.bib-url}.
+\/Thorsten Brants. &ldquo;TnT &ndash; Statistical Part-of-Speech Tagging&rdquo;. 2000. <http://www.coli.uni-saarland.de/~thorsten/tnt/>{.bib-url}.
 ~ end bibitem
 
 ~ begin bibitem {id:"Charniak1993"; cite-year:"1993"; cite-authors:"Charniak"; cite-authors-long:"Charniak"; cite-label:"2"; caption:"Statistical language learning&nl;Charniak, 1993"; data-line:"sources.bib:23"; searchterm:"Statistical%20language%20learning%20Charniak%2C%201993"; bibitem-label:"\[2\]"}
-\/Eugene Charniak. &ldquo;Statistical Language Learning.&rdquo; 1993.
+\/Eugene Charniak. &ldquo;Statistical Language Learning&rdquo;. 1993.
 ~ end bibitem
 
-~ begin bibitem {id:"Gale1992"; cite-year:"1992"; cite-authors:"Gale et al."; cite-authors-long:"Gale, Church, and David"; cite-label:"3"; caption:"Estimating Upper and Lower Bounds on the Performance of Word-Sense Disambiguation Programs&nl;Gale, Church, and David, 1992"; data-line:"sources.bib:17"; searchterm:"Estimating%20Upper%20and%20Lower%20Bounds%20on%20the%20Performance%20of%20WordSense%20Disambiguation%20Programs%20Gale%2C%20Church%2C%20and%20David%2C%201992"; bibitem-label:"\[3\]"}
-\/William Gale, Kenneth Ward Church, and Yarowsky David. &ldquo;Estimating Upper and Lower Bounds on the Performance of Word-Sense Disambiguation Programs.&rdquo; 1992.
+~ begin bibitem {id:"Gale1992"; cite-year:"1992"; cite-authors:"Gale u. a."; cite-authors-long:"Gale, Church, und David"; cite-label:"3"; caption:"Estimating Upper and Lower Bounds on the Performance of Word-Sense Disambiguation Programs&nl;Gale, Church, und David, 1992"; data-line:"sources.bib:17"; searchterm:"Estimating%20Upper%20and%20Lower%20Bounds%20on%20the%20Performance%20of%20WordSense%20Disambiguation%20Programs%20Gale%2C%20Church%2C%20und%20David%2C%201992"; bibitem-label:"\[3\]"}
+\/William Gale, Kenneth Ward Church, und Yarowsky David. &ldquo;Estimating Upper and Lower Bounds on the Performance of Word-Sense Disambiguation Programs&rdquo;. 1992.
 ~ end bibitem
 
-~ begin bibitem {id:"Huang2015"; cite-year:"2015"; cite-authors:"Huang et al."; cite-authors-long:"Huang, Xu, and Yu"; cite-label:"4"; caption:"Bidirectional LSTM-CRF Models for Sequence Tagging&nl;Huang, Xu, and Yu, 2015"; data-line:"sources.bib:50"; searchterm:"Bidirectional%20LSTMCRF%20Models%20for%20Sequence%20Tagging%20Huang%2C%20Xu%2C%20and%20Yu%2C%202015"; bibitem-label:"\[4\]"}
-\/Zhiheng Huang, Wei Xu, and Kai Yu. &ldquo;Bidirectional LSTM-CRF Models for Sequence Tagging.&rdquo; 2015.
+~ begin bibitem {id:"Huang2015"; cite-year:"2015"; cite-authors:"Huang u. a."; cite-authors-long:"Huang, Xu, und Yu"; cite-label:"4"; caption:"Bidirectional LSTM-CRF Models for Sequence Tagging&nl;Huang, Xu, und Yu, 2015"; data-line:"sources.bib:50"; searchterm:"Bidirectional%20LSTMCRF%20Models%20for%20Sequence%20Tagging%20Huang%2C%20Xu%2C%20und%20Yu%2C%202015"; bibitem-label:"\[4\]"}
+\/Zhiheng Huang, Wei Xu, und Kai Yu. &ldquo;Bidirectional LSTM-CRF Models for Sequence Tagging&rdquo;. 2015.
 ~ end bibitem
 
-~ begin bibitem {id:"Marcus1993"; cite-year:"1993"; cite-authors:"Marcus et al."; cite-authors-long:"Marcus, Santorini, and Marcinkiewicz"; cite-label:"5"; caption:"Building a Large Annotated Corpus of English: The Penn Treebank&nl;Marcus, Santorini, and Marcinkiewicz, 1993"; data-line:"sources.bib:29"; searchterm:"Building%20a%20Large%20Annotated%20Corpus%20of%20English%3A%20The%20Penn%20Treebank%20Marcus%2C%20Santorini%2C%20and%20Marcinkiewicz%2C%201993"; bibitem-label:"\[5\]"}
-\/Mitchell P.&nbsp;Marcus, Beatrice Santorini, and Mary Ann Marcinkiewicz. &ldquo;Building a Large Annotated Corpus of English: The Penn Treebank.&rdquo; 1993.
+~ begin bibitem {id:"Marcus1993"; cite-year:"1993"; cite-authors:"Marcus u. a."; cite-authors-long:"Marcus, Santorini, und Marcinkiewicz"; cite-label:"5"; caption:"Building a Large Annotated Corpus of English: The Penn Treebank&nl;Marcus, Santorini, und Marcinkiewicz, 1993"; data-line:"sources.bib:29"; searchterm:"Building%20a%20Large%20Annotated%20Corpus%20of%20English%3A%20The%20Penn%20Treebank%20Marcus%2C%20Santorini%2C%20und%20Marcinkiewicz%2C%201993"; bibitem-label:"\[5\]"}
+\/Mitchell P.&nbsp;Marcus, Beatrice Santorini, und Mary Ann Marcinkiewicz. &ldquo;Building a Large Annotated Corpus of English: The Penn Treebank&rdquo;. 1993.
 ~ end bibitem
 
 ~ begin bibitem {id:"Sogaard2011"; cite-year:"2011"; cite-authors:"Søgaard"; cite-authors-long:"Søgaard"; cite-label:"6"; caption:"Semi-supervised condensed nearest neighbor for part-of-speech tagging&nl;Søgaard, 2011"; data-line:"sources.bib:56"; searchterm:"Semisupervised%20condensed%20nearest%20neighbor%20for%20partofspeech%20tagging%20S%C3%B8gaard%2C%202011"; bibitem-label:"\[6\]"}
-\/Anders Søgaard. &ldquo;Semi-Supervised Condensed Nearest Neighbor for Part-of-Speech Tagging.&rdquo; 2011.
+\/Anders Søgaard. &ldquo;Semi-Supervised Condensed Nearest Neighbor for Part-of-Speech Tagging&rdquo;. 2011.
 ~ end bibitem
 
 ~ begin bibitem {id:"Voutilainen1995"; cite-year:"1995"; cite-authors:"Voutilainen"; cite-authors-long:"Voutilainen"; cite-label:"7"; caption:"undefined&nl;Voutilainen, 1995"; data-line:"sources.bib:35"; searchterm:"undefined%20Voutilainen%2C%201995"; bibitem-label:"\[7\]"}
 \/Atro Voutilainen. 1995.
 ~ end bibitem
 
-~ begin bibitem {id:"imsWeb"; cite-authors:"n.d."; cite-authors-long:"n.d."; cite-label:"8"; caption:"undefined&nl;n.d., "; data-line:"sources.bib:14"; searchterm:"undefined%20n.d.%2C%20"; bibitem-label:"\[8\]."}
+~ begin bibitem {id:"imsWeb"; cite-authors:"o. J."; cite-authors-long:"o. J."; cite-label:"8"; caption:"undefined&nl;o. J., "; data-line:"sources.bib:14"; searchterm:"undefined%20o.%20J.%2C%20"; bibitem-label:"\[8\]."}
 \/ <http://www.ims.uni-stuttgart.de/>{.bib-url}.
 ~ end bibitem
 

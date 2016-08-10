@@ -1,5 +1,6 @@
 Title         : Überblick über die Aufgabe des POS-Tagging und bestehende Lösungen
 subtitle      : Seminararbeit zum Thema Sprachverarbeitung
+Title Footer  : Eingereicht am 10.08.2016
 Author        : Tobias Knöppler
 Affiliation   : Fachbereich Informatik, Uni Hamburg
 Email         : tobias@knoeppler.net 
@@ -7,6 +8,7 @@ Logo          : False
 Bibliography  : sources.bib
 Cite Style    : natural
 name-contents : Inhaltsverzeichnis
+Locale        : german
 
 
 [TITLE]
@@ -23,6 +25,14 @@ name-contents : Inhaltsverzeichnis
 
 &pagebreak;
 
+**Abstract**
+
+Ich erkläre die grundlegende Aufgabe von Part-Of-Speech-Tagging und die allgemeine Herangehensweise inklusive einiger konkreter Beispiele.</br>
+Diese Arbeit soll nicht dazu dienen, POS-Tagging-Verfahren in ihrer Tiefe zu erklären, sondern das Aufgabenfeld einordnen zu können.
+
+~ Begin Columns
+~ Column
+
 # Einleitung
 ## POS-Tagging: Definition
 
@@ -32,7 +42,6 @@ Ist ein Wort erst einmal mit der zugehörigen Wortart versehen, kann dies für v
 
 ## Ziel der Arbeit
 In dieser Arbeit versuche ich, eine möglichste breite Übersicht über den aktuellen Stand des POS-Tagging zu geben.</br>
-
 
 # Verfahren
 
@@ -51,6 +60,8 @@ Ein weiterer Korpus ist die Penn Treebank (PTB). Dieser Korpus entstand, indem T
 
 Für die deutsche Sprache gibt es zum Beispiel den TIGER Corpus, der aus etwa 900.000 Worten aus schriftlichen Nachrichtentexten der Frankfurter Rundschau aufgebaut ist [-@imsWeb].
 
+~
+~ Column
 ## Entscheidungsgrundlagen
 Oft lässt sich die Wortart direkt von einem Wort ableiten - ohne weitere Informationen zu berücksichtigen. Das ist dann der Fall, wenn das Wort in einem Wörterbuch enthalten (also bereits bekannt) ist und es nur eine einzige Wortart haben kann (d.h. keine Mehrdeutigkeit der Wortart besteht).</br>
 Leider ist in den meisten kein ausreichend vollständiges Wörterbuch verfügbar. Die eigentliche Herausforderung bilden deshalb die übrigen Worte, also unbekannte Worte und solche, die mehreren Wortarten zugehörig sein können. Im deutschen ist die erste Kategorie besonders groß, da es eine unendliche Zahl valider, zusammengesetzter Worte gibt, was ein vollständiges Wörterbuch unmöglich macht. In der englischen Sprache spielen zusammengesetzte Worte zwar eine kleinere Rolle, aber dafür existieren zahlreiche Worte, die mehreren Wortarten angehören können, insbesondere, da Substantive sich nicht durch Großschreibung von anderen Wortarten abheben.
@@ -118,6 +129,9 @@ Für diese Textsorten werden mitunter deutlich schlechtere Ergebnisse erziehlt.
 Aus diesem Grund halte ich es für voreilig, POS-Tagging als vollends gelöstes Problem zu betrachten, auch wenn die aktuellen Resultate bereits viele Zwecken genügen.
 
 [^aclwiki]: https://www.aclweb.org/aclwiki/index.php?title=POS_Tagging_(State_of_the_art)#WSJ
+
+~
+~ End Columns
 
 [BIB]
 
