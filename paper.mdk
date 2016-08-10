@@ -60,8 +60,6 @@ Ein weiterer Korpus ist die Penn Treebank (PTB). Dieser Korpus entstand, indem T
 
 Für die deutsche Sprache gibt es zum Beispiel den TIGER Corpus, der aus etwa 900.000 Worten aus schriftlichen Nachrichtentexten der Frankfurter Rundschau aufgebaut ist [-@imsWeb].
 
-~
-~ Column
 ## Entscheidungsgrundlagen
 Oft lässt sich die Wortart direkt von einem Wort ableiten - ohne weitere Informationen zu berücksichtigen. Das ist dann der Fall, wenn das Wort in einem Wörterbuch enthalten (also bereits bekannt) ist und es nur eine einzige Wortart haben kann (d.h. keine Mehrdeutigkeit der Wortart besteht).</br>
 Leider ist in den meisten kein ausreichend vollständiges Wörterbuch verfügbar. Die eigentliche Herausforderung bilden deshalb die übrigen Worte, also unbekannte Worte und solche, die mehreren Wortarten zugehörig sein können. Im deutschen ist die erste Kategorie besonders groß, da es eine unendliche Zahl valider, zusammengesetzter Worte gibt, was ein vollständiges Wörterbuch unmöglich macht. In der englischen Sprache spielen zusammengesetzte Worte zwar eine kleinere Rolle, aber dafür existieren zahlreiche Worte, die mehreren Wortarten angehören können, insbesondere, da Substantive sich nicht durch Großschreibung von anderen Wortarten abheben.
@@ -78,6 +76,8 @@ Der nächste Schritt ist, den syntaktischen Kontext des Wortes mit in die Klassi
 Dasselbe gilt in noch größerem Maße für das Einbeziehen des semantischen Kontextes. Dies erlaubt zwar einige Fälle zu entscheiden, in denen die Wortart rein syntaktisch nicht auflösbar wäre, aber der Aufwand hierfür ist so gewaltig, dass dies bei den meisten aktuellen POS-Taggern keine Rolle spielt.
 
 Die genannten Merkmale bilden zusammen die Eigenschaften auf deren Grundlage die meisten POS-Tagger trainiert werden.
+~
+~ Column
 
 ## Genauigkeit
 
